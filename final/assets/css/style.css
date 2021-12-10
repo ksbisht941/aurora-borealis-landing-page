@@ -10,9 +10,11 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  color: #000;
   font-family: 'Montserrat', sans-serif;
 }
 
+/* backgroud */
 .background {
   position: absolute;
   width: 100%;
@@ -21,12 +23,12 @@ body {
   z-index: -1;
 }
 
-
 .background img {
   height: 100%;
   width: 100%;
 }
 
+/* header */
 header {
   position: fixed;
   top: 0;
@@ -34,9 +36,9 @@ header {
   width: 100%;
   height: 90px;
   display: flex;
-  justify-self: flex-start;
+  justify-content: flex-start;
   align-items: center;
-  padding: 10px 70px;
+  padding: 10px 70px
 }
 
 header .hamburger {
@@ -45,41 +47,35 @@ header .hamburger {
   margin-right: 100px;
   cursor: pointer;
 }
-
-header .logo img {
-  max-width: 50px;
-  height: auto;
-}
-
-main {
+ 
+/* main */
+main.main {
   margin-top: 90px;
   padding: 50px 70px;
 }
 
 main h1 {
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 500;
-  line-height: 110%;
-  letter-spacing: 2.2px;
+  line-height: 120%;
   color: #fff;
+  letter-spacing: 2.2px;
   margin-bottom: 0px;
 
   position: relative;
   letter-spacing: 2.5px;
-}
 
-main  h1 span {
-  display: block;
+  width: 45%;
 }
 
 main h6 {
   margin-top: 40px;
   font-size: 20px;
   line-height: 110%;
-  letter-spacing: 0.7px;
+  letter-spacing: .7px;
   font-weight: 500;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 main p {
@@ -96,21 +92,20 @@ main .down {
   bottom: 0;
   left: 0;
   padding: 40px 100px 60px;
-
   width: 100%;
 }
 
-main button.btn {
+main .down button.btn {
   background-color: transparent;
   border: none;
   color: #fff;
-  font-size: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 16px;
   text-transform: capitalize;
   border: 0.7px solid #fff;
-  padding: 10px;
+  padding: 15px;
   padding-right: 30px;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -119,19 +114,7 @@ main button.btn {
   -o-border-radius: 50px;
 }
 
-main .down button.btn span {
-  height: 35px;
-  width: 35px;
-  border: 2.5px solid #fff;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+main .down button.btn i {
   margin-right: 12px;
 }
 
@@ -139,9 +122,9 @@ main .down::before {
   content: "";
   position: absolute;
   top: 44%;
-  left: 0%;
+  left: 0;
   width: 100px;
-  height: 0.7px;
+  height: .7px;
   z-index: -1;
   background-color: #fff;
 }
@@ -150,11 +133,11 @@ main .down::after {
   content: "";
   position: absolute;
   top: 44%;
-  left: 318px;
+  left: 300px;
+  height: .7px;
   width: 78.3%;
-  height: 0.7px;
-  z-index: -1;
   background-color: #fff;
+  z-index: -1;
 }
 
 main .down span.dot {
@@ -175,11 +158,11 @@ main .down span.dot.one {
 }
 
 main .down span.dot.two {
-  right: 20%;
+right: 20%;
 }
 
 main .down span.dot.three {
-  right: 35%;
+right: 35%;
 }
 
 main .progress {
@@ -211,35 +194,43 @@ main .progress .circle svg.full circle {
 
 main .progress .circle svg.fill {
   transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
 }
 
 main .progress .circle svg.fill circle {
   stroke: #fff;
-  stroke-dashoffset: 303px;
 }
 
 main .progress .percentage {
   display: block;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
   left: 50%;
-  width: 100%;
   text-align: center;
   line-height: 36px;
   font-weight: 400;
   font-size: 26px;
   color: #fff;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
 }
 
-
 main span.msg {
+  font-size: 12px;
   position: absolute;
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
   text-orientation: mixed;
-  color: #fff;
+  -webkit-text-orientation: mixed;
   letter-spacing: 9px;
-  font-size: 12px;
+  color: #fff;
   top: 30%;
   right: 50px;
 }
@@ -248,19 +239,18 @@ main span.msg i {
   font-size: 22px;
 }
 
-.aside {
+/* aside */
+aside {
   position: fixed;
   top: 0;
   left: 0;
   max-width: 320px;
   width: 100%;
   height: 100vh;
-  z-index: 99;
-  padding: 0px 50px 0px;
-  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 0 50px 0;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.1);
-  /* background-color: rgba(0, 0, 0, 0.1); */
   transform: translateX(-100%);
   -webkit-transform: translateX(-100%);
   -moz-transform: translateX(-100%);
@@ -274,11 +264,11 @@ main span.msg i {
 }
 
 aside.show {
-  transform: translateX(0%);
-  -webkit-transform: translateX(0%);
-  -moz-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  -o-transform: translateX(0%);
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
 }
 
 aside .close {
@@ -302,9 +292,7 @@ aside .aside-menu .aside-menu-item {
   box-sizing: border-box;
   letter-spacing: 2px;
   width: max-content;
-
   position: relative;
-
   transform: translateX(0%);
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(0%);
@@ -335,29 +323,29 @@ aside .aside-menu .aside-menu-item:hover::before {
   width: 100%;
 }
 
-aside .aside-menu-item .aside-menu-link {
+aside .aside-menu .aside-menu-item a {
   text-decoration: none;
   color: inherit;
 }
 
-aside ul.aside-social {
+aside ul.social-list {
   list-style: none;
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 40px;
 }
 
-aside ul.aside-social li.social-item {
+aside ul.social-list li.social-item {
   display: inline-block;
   font-size: 12px;
   letter-spacing: 4px;
 }
 
-aside ul.aside-social li.social-item:not(:last-child) {
+aside ul.social-list li.social-item:not(:last-child) {
   margin-right: 30px;
 }
 
-aside ul.aside-social li.social-item a.social-link {
+aside ul.social-list li.social-item a {
   color: #fff;
-text-decoration: none;
+  text-decoration: none;
 }
