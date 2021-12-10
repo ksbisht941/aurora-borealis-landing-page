@@ -2,4 +2,4 @@
 
 ## [Watch it on youtube](https://youtu.be/RSJDwH7plsY)
 
-![Design Preview](/preview.jpg)
+![Design Preview](/preview.jpeg)
